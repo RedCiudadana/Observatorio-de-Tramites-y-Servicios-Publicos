@@ -57,7 +57,7 @@ module.exports = async function () {
   const jsonData = JSON.stringify(response_final, null, 2);
 
   // Define the file path where you want to save the JSON file
-  const outputPath = 'jsons/servicios.json';
+  const outputPath = 'jsons/tramites.json';
 
   // Write the JSON data to the file
   try {
