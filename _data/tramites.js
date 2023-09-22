@@ -5,7 +5,6 @@ const { AssetCache } = require("@11ty/eleventy-fetch");
 // Load .env variables with dotenv
 require('dotenv').config();
 
-// Node
 // Global variable: process.env
 
 module.exports = async function () {
