@@ -10,10 +10,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy('admin');
 
-    eleventyConfig.setBrowserSyncConfig({
-        codeSync: false, // Disable Eleventy's asset cache
-    });
-
     eleventyConfig.addNunjucksFilter("rmj", function (content) {
         return rmj(content);
     });
