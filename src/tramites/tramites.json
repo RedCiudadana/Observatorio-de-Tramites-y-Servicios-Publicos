@@ -1,5 +1,0 @@
-{
-    "tags": "tramites",
-    "permalink": "tramite/{{ page.fileSlug }}/index.html",
-    "layout": "layouts/tramite.njk"
-}
