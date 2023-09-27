@@ -1,5 +1,5 @@
 {
-  "name": "tramites_departamentales",
+  "name": "observatorio_de_tramites_y_servicios_publicos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RedCiudadana/Tramites_Departamentales.git"
+    "url": "git+https://github.com/RedCiudadana/Observatorio-de-Tramites-y-Servicios-Publicos.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RedCiudadana/Tramites_Departamentales/issues"
+    "url": "https://github.com/RedCiudadana/Observatorio-de-Tramites-y-Servicios-Publicos/issues"
   },
-  "homepage": "https://github.com/RedCiudadana/Tramites_Departamentales#readme",
+  "homepage": "https://github.com/RedCiudadana/Observatorio-de-Tramites-y-Servicios-Publicos#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "^2.0.1"
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.0",
