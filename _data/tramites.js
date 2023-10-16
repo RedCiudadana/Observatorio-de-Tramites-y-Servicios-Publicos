@@ -34,7 +34,7 @@ module.exports = async function () {
     // Cache item resource to get cached response from `/category/1`
     // when called in related resources.
     data.forEach(element => {
-      let asset = new AssetCache(`${url}/${element.id}`);
+      // let asset = new AssetCache(`${url}/${element.id}`);
 
       if (asset.isCacheValid('1m')) {
         return;
