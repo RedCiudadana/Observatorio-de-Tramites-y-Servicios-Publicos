@@ -31,18 +31,6 @@ module.exports = async function () {
       type: "json"    // we’ll parse JSON for you
     });
 
-    // Cache item resource to get cached response from `/category/1`
-    // when called in related resources.
-    data.forEach(element => {
-      // let asset = new AssetCache(`${url}/${element.id}`);
-
-      if (asset.isCacheValid('1m')) {
-        return;
-      }
-
-      asset.save(element, 'json');
-    });
-
     if (data.length > 0) {
       response.push(data)
 
