@@ -1,0 +1,209 @@
+---
+pagination:
+  data: servicios
+  size: 1
+  alias: servicio
+  addAllPagesToCollections: true
+permalink: "servicio/{{servicio.id}}/index.html"
+tags:
+  - servicio
+---
+{% extends "src/base.njk" %}
+
+
+{% block head %}
+    <title>Catálogo de Trámites | {{servicio.name}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--LINK DE REFERENCIA PARA RATING https://www.youtube.com/watch?v=KdO9P8FnVN4&t=0s-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+{% endblock %}
+
+{% block content %}
+    <div class="sidebar d-flex">
+        <div><a class="btn" href="#">Evalua</a></div>
+        <div><a class="btn" href="/quejas.html">Reporta</a></div>
+    </div>
+    <div class="page-header breadcrumb-wrap">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/index.html" rel="nofollow"><i class="fi-rs-home mr-5"></i>Inicio</a>
+                <span></span> {%for item in collections.categoriaesp2 %}{% if item.data.categoriaesp2.name == servicio.subcategory.name %} {% for categoria in collections.categorias2 %}{% if categoria.data.categoria2.id == item.data.categoriaesp2.category | lastSlash %}<a href="{{categoria.url}}">{{categoria.data.categoria2.name}}</a> {%endif%}{%endfor%}{%endif%}{%endfor%}
+                <span></span> {%for item in collections.categoriaesp2 %}{% if item.data.categoriaesp2.name == servicio.subcategory.name %} <a href="{{item.url}}">{{item.data.categoriaesp2.name}}</a> {%endif%}{%endfor%}
+                <span></span> {{servicio.name}}
+            </div>
+        </div>
+    </div>
+    <div class="page-content mb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-11 col-lg-12 m-auto">
+                    <div class="row">
+                        <div class="col-lg-3 primary-sidebar sticky-sidebar pt-50">
+                            <div class="widget-area">
+                                <div class="sidebar-widget widget-category-2 mb-50">
+                                    <h5 class="section-title style-1 mb-30">Especificaciones</h5>
+                                    <ul>
+                                        <li>
+                                            
+                                            <a href="{% for institucion in collections.instituciones %}{% if institucion.data.instituciones.name === servicio.institution.name%}{{institucion.url}}{%endif%}{%endfor%}"> <img src="/ELEMENTOS/ICONOS/ICONOS 2-21.png" alt="" />{{servicio.institution.name}}</a>
+                                        </li>
+                                        <li>
+                                            <a style="pointer-events:none" href="shop-grid-right.html"> <img src="/ELEMENTOS/ICONOS/ICONOS 2-10.png" alt="" />Resultado: {{servicio.typeOfDocumentObtainable}}</a>
+                                        </li>
+                                        {% if (servicio.typeOfCost == null) or (servicio.typeOfCost == "fixed") %}
+                                        <li>
+                                            <a style="pointer-events:none" href="shop-grid-right.html"> <img src="/ELEMENTOS/ICONOS/ICONOS 2-11.png" alt="" />Costo: {{servicio.currency.symbol}} {{servicio.cost | safe}} </a>
+                                        </li>
+                                        {% else %}
+                                        <li>
+                                            <a style="pointer-events:none" href="shop-grid-right.html"> <img src="/ELEMENTOS/ICONOS/ICONOS 2-11.png" alt="" />Costo: {{servicio.currency.symbol}} {{servicio.variableCostDescription | rmj | safe}} </a>
+                                        </li>
+                                        {% endif %}
+                                        <li>
+                                            <a style="pointer-events:none" href="shop-grid-right.html"> <img src="/ELEMENTOS/ICONOS/ICONOS 2-12.png" alt="" />Tiempo de Respuesta: {{servicio.timeResponse}}</a>
+                                        </li>
+                                        <li>
+                                            <a href="/quejas.html"> <img src="/ELEMENTOS/ICONOS/ICONOS 2-13.png" alt="" />¿Tienes problemas con este trámite? Comunícate con nosotros</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Product sidebar Widget -->
+                                <div class="sidebar-widget widget-category-2 mb-50">
+                                    <h5 class="section-title style-1 mb-30">Servicios Populares</h5>
+                                    <ul>
+                                        {% for servicio in collections.serviciosHighlighted | limit(3) %}
+                                        {% if servicio.url !== page.url%}
+                                        <li>
+                                            <a href="{{servicio.url}}"> {{servicio.data.servicio.name}}</a>
+                                        </li>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <!--Tags-->
+                                <!--div class="sidebar-widget widget-category-2 mb-50">
+                                    <h5 class="section-title style-1 mb-30">Valoración del Catálogo</h5>
+                                    <ul>
+                                        <li>
+                                            <form class="rating">
+                                                <label>
+                                                    <input type="radio" name="stars" value="1" />
+                                                    <span class="icon">☻</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="stars" value="2" />
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="stars" value="3" />
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>   
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="stars" value="4" />
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="stars" value="5" />
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                    <span class="icon">☻</span>
+                                                </label>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div-->
+                                <!--POSIBLES ANUNCIOS-->
+                                <!--div class="banner-img wow fadeIn mb-50 animated d-lg-block d-none">
+                                    <img src="/assets/imgs/banner/banner-11.png" alt="" />
+                                    <div class="banner-text">
+                                        <span>Oganic</span>
+                                        <h4>
+                                            Save 17% <br />
+                                            on <span class="text-brand">Oganic</span><br />
+                                            Juice
+                                        </h4>
+                                    </div>
+                                </div-->
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-9">
+                            <div class="single-page pt-50 pl-30">
+                                <div class="single-header style-2">
+                                    <div class="row">
+                                        <div class="col-xl-10 col-lg-12 m-auto">
+                                            <h6 class="mb-10"><a href="#">Trámite</a></h6>
+                                            <h2 class="mb-10">{{servicio.name}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-content">
+                                    <div class="row">
+                                        <div class="col-xl-10 col-lg-12 m-auto texto-servicio">
+                                            <p>{{servicio.description | rmj |safe}}</p>
+                                            <h4>Normativa</h4>
+                                            <p>{{servicio.normative | rmj |safe}}</p>
+                                            <h4>Requerimientos</h4>
+                                            <p>{{servicio.requirements | rmj |safe}}</p>
+                                            <h4>Pasos</h4>
+                                            <p>{{servicio.instructions | rmj |safe}}</p>
+                                            <h4>Ir al trámite en línea</h4>
+                                            <a class="btn mb-20" href="{{servicio.url}}" target="_blank">Ver Trámite</a>
+                                            <p>Información proporcionada por: <a href="{% for institucion in collections.instituciones %}{% if institucion.data.instituciones.name === servicio.institution.name%}{{institucion.url}}{%endif%}{%endfor%}">{{servicio.institution.name}}</a></p>
+                                            <!--div class="comment-form ">
+                                                <h5 >Valoración del trámite</h5>
+                                                <form class="rating">
+                                                    <label>
+                                                        <input type="radio" name="stars" value="1" />
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="2" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="3" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>   
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="4" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="5" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                </form>
+                                            </div-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

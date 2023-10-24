@@ -1,0 +1,236 @@
+---
+permalink: index2.html
+---
+
+{% extends "src/base.njk"%}
+
+{% block head %}
+  <title>Catálogo de Trámites | GAE</title>
+  <!--NETLIFY CMS-->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block content%}
+        <section class="home-slider position-relative mb-30">
+            <div class="container">
+                <div class="home-slide-cover mt-30">
+                    <div class="hero-slider-1 style-4 dot-style-1 dot-style-1-position-1">
+                        <div class="single-hero-slider single-animation-wrap slider-img">
+                            <div class="slider-content">
+                                <h1 class="display-2 mb-40 text-white">
+                                    Catálogo Nacional<br> de Trámites
+                                </h1>
+                                <p class="text-white" style="line-height:30px">
+                                    En este espacio cualquier ciudadano encontrará <br>
+                                    información y enlaces necesarios para realizar <br>
+                                    trámites ante instituciones públicas desde casa, <br>
+                                    oficina y/o dispositivo móvil.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-hero-slider single-animation-wrap slider-img">
+                            <div class="slider-content">
+                                <h1 class="display-2 mb-40 text-white">
+                                    Catálogo Nacional<br> de Trámites
+                                </h1>
+                                <p class="text-white" style="line-height:30px">
+                                    Los trámites podrán realizarse de forma electrónica, <br>
+                                    evitando el uso de papel y largas filas de espera al <br>
+                                    presentarse a una institución pública; reduciendo <br>
+                                    pasos, tiempo y costo en la gestión.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-arrow hero-slider-1-arrow"></div>
+                </div>
+            </div>
+        </section>
+        <!--End hero slider-->
+        <!--INSTITUCIONES-->
+        <section class="featured section-padding">
+            <div class="container">
+                <div class="row mb-40 mt-40">
+                    <h4>Instituciones</h4>
+                </div>
+                <div class="row mb-20 mt-40">
+                    {% for item in collections.ministerios | limit(15) %}
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0 mb-40">
+                        <a href="{{item.url}}"><div class="banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                            <div class="banner-icon">
+                                <img src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-50.png" alt="" />
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">{{item.data.instituciones.name}}</h3>
+                            </div>
+                        </div></a>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+
+                <div class="row mb-20 mt-40 justify-content-center">
+                    <a class="btn col-lg-2"  href="/instituciones/index.html">Ver Más<a/>
+                </div>
+                
+            </div>
+        </section>
+        <!--CATEGORIAS ESPECIFICAS-->
+        <section class="featured section-padding">
+            <div class="container">
+                <div class="row mb-40 mt-40">
+                    <h4>¿Qué información necesitas?</h4>
+                </div>
+                <div class="row mb-20 mt-40 justify-content-center">
+                    {% for item in collections.categoriaesp2 | limit(10) %}
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0 mb-40">
+                        <a href="{{item.url}}"><div class="banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                            <div class="banner-icon">
+                                {% for cat in collections.categorias2%}
+                                {% if cat.data.categoria2.id == item.data.categoriaesp2.category | lastSlash %}
+                                    {% if cat.data.categoria2.id == "27" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-41.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "28" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-35.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "29" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-47.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "30" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-36.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "31" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-48.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "32" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-37.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "33" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-45.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "34" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-40.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "35" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-39.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "36" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-34.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "37" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-46.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "38" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-44.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "39" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-32.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "40" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-43.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "41" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-42.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "42" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-38.png" alt="" />
+                                    {%endif%}
+                                    {% if cat.data.categoria2.id == "43" %}
+                                        <img  src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-33.png" alt="" />
+                                    {%endif%}
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">{{item.data.categoriaesp2.name}}</h3>
+                            </div>
+                        </div></a>
+                    </div>
+                    {% endfor %}
+                    <a class="btn col-lg-2"  href="/categoriasesps/index.html">Ver Más<a/>
+                </div>
+            </div>
+        </section>
+
+        <!--Alianzas-->
+        <section class="featured section-padding">
+            <div class="container">
+                <div class="row mb-40 mt-40 px-4">
+
+                    <div class="col-lg-2 col-sm-12">
+                        <a target="blank" href="https://gobiernoabierto.transparencia.gob.gt/"><img src="/assets/imgs/iconos_extras/Botones-09.png" alt="alianza para el gobierno abierto"></a>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-12">
+                        <a target="blank" href="https://transparencia.gob.gt/informacion-publica-de-oficio/"><img src="/assets/imgs/iconos_extras/Botones-07.png" alt="transparencia"></a>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-12">
+                        <a target="blank" href="https://www.albakeneth.gob.gt/"><img src="/assets/imgs/iconos_extras/Botones-01.png" alt="alba-keneth"></a>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-12">
+                        <a target="blank" href="http://observatorio.mp.gob.gt/wordpress/index.php/boletines/"><img src="/assets/imgs/iconos_extras/Botones-03.png" alt="alerta"></a>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-12">
+                        <a target="blank" href="https://cpcc.gob.gt/formulario-alertas-de-corrupcion/"><img src="/assets/imgs/iconos_extras/Botones-05.png" alt="alertas-de-corrupcion"></a>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-12">
+                        <a target="blank" href="https://transparencia.gob.gt/sinacig/"><img src="/assets/imgs/iconos_extras/Botones-11.png" alt="sinacig"></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        
+        
+        <!--End category slider-->
+        <!--section class="banners mb-25">
+            <div class="container">
+                <div class="row mb-40 mt-40">
+                    <h4>Trámites Destacados</h4>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="banner-img wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                            <img src="/assets/imgs/banner/banner-1.png" alt="" />
+                            <div class="banner-text">
+                                <h4>
+                                    Everyday Fresh & <br />Clean with Our<br />
+                                    Products
+                                </h4>
+                                <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="banner-img wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                            <img src="/assets/imgs/banner/banner-2.png" alt="" />
+                            <div class="banner-text">
+                                <h4>
+                                    Make your Breakfast<br />
+                                    Healthy and Easy
+                                </h4>
+                                <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-md-none d-lg-flex">
+                        <div class="banner-img mb-sm-0 wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+                            <img src="/assets/imgs/banner/banner-3.png" alt="" />
+                            <div class="banner-text">
+                                <h4>The best Organic <br />Products Online</h4>
+                                <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section-->
+
+{% endblock %}

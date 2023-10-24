@@ -1,0 +1,127 @@
+---
+permalink: "categorias/index.html"
+---
+{% extends "src/base.njk" %}
+
+{% block head %}
+
+    <title>Categorías</title>
+
+{% endblock %}
+
+{% block content %}
+        <section class="hero-3 position-relative align-items">
+            <h2 class="mb-30 text-center text-white">Categorías</h2>
+        </section>
+        <div class="page-header breadcrumb-wrap">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/index.html" rel="nofollow"><i class="fi-rs-home mr-5"></i>Inicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="page-content pt-50">
+            <div class="container">
+                <div class="row vendor-grid">
+
+                    {% for cat in collections.categoria2%}
+
+                    <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                        <div class="vendor-wrap style-2 mb-40">
+                            <div class="product-badges product-badges-position product-badges-mrg">
+                                <span class="hot">Trámite</span>
+                            </div>
+                            <div class="vendor-img-action-wrap">
+                                <div class="vendor-img">
+                                    <a href="{{cat.url}}">
+                                        {% if cat.data.categoria2.id == "27" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-41.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "28" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-35.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "29" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-47.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "30" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-36.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "31" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-48.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "32" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-37.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "33" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-45.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "34" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-40.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "35" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-39.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "36" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-34.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "37" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-46.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "38" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-44.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "39" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-32.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "40" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-43.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "41" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-42.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "42" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-38.png" alt="" />
+                                        {%endif%}
+                                        {% if cat.data.categoria2.id == "43" %}
+                                            <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-33.png" alt="" />
+                                        {%endif%}
+                                    </a>
+                                </div>
+                                <!--div class="mt-10">
+                                    <span class="font-small total-product">380 products</span>
+                                </div-->
+                            </div>
+                            <div class="vendor-content-wrap w-100">
+                                <div class="mb-30">
+                                    <!--div class="product-category">
+                                        <span class="text-muted">Since 2012</span>
+                                    </div-->
+                                    <div class="overflow-hidden" style="height:60px">
+                                        <h4 class="mb-5"><a href="{{cat.url}}">{{cat.data.categoria2.name}}</a></h4>
+                                    </div>
+                                    <!--div class="product-rate-cover">
+                                        <div class="product-rate d-inline-block">
+                                            <div class="product-rating" style="width: 90%"></div>
+                                        </div>
+                                        <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                    </div-->
+                                    <div class="vendor-info d-flex justify-content-between align-items-end mt-30">
+                                        <ul class="contact-infor text-muted">
+                                            <div >
+                                                <li><p class="text-overflow">{{cat.data.categoria2.description}}</p></li>
+                                            </div>
+                                            <!--li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li-->
+                                        </ul>
+                                        <a href="{{cat.url}}" class="btn btn-xs">Ver más <i class="fi-rs-arrow-small-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end vendor card-->
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+{% endblock %}

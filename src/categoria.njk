@@ -1,0 +1,176 @@
+---
+pagination:
+  data: categorias
+  size: 1
+  alias: categoria2
+  addAllPagesToCollections: true
+permalink: "categorias/{{categoria2.name | slug}}/index.html"
+tags:
+  - categoria2
+---
+{% extends "src/base.njk" %}
+
+{% block head %}
+  <title>Catálogo de Trámites | {{categoria2.name}}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block content %}
+        <div class="page-header breadcrumb-wrap">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/index2.html" rel="nofollow"><i class="fi-rs-home mr-5"></i>Inicio</a>
+                    <span></span> {{categoria2.name}}
+                </div>
+            </div>
+        </div>
+        <div class="page-content pt-50">
+            <div class="container">
+                <div class="archive-header-2 text-center">
+                    <h1 class="heading-2 mb-10">{{categoria2.name}}</h1>
+                    {% set cuenta = 0 %}
+                    {% for catesp in collections.categoriaesp2 %}
+                    {% if categoria2.id == catesp.data.categoriaesp2.category | lastSlash %}
+                    {% for servicio in collections.servicios%}
+                    {% if catesp.data.categoriaesp2.name == servicio.data.servicio.subcategory.name%}
+                    {% set cuenta = cuenta + 1 %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                    <h6 class="text-body">La categoría cuenta con {{ cuenta }} trámites en el catálogo.</h6>
+                </div>
+                <!--BUSCADOR-->
+                <!--div class="row mt-40 mb-40 justify-content-center d-flex" style="align-items:center">
+                    <div class="col-lg-9 col-sm-12">
+                        <div>
+                            <form action="#" class="m-auto">
+                                <input class="search-ins" autocomplete="off" id="search-cat" type="search" placeholder="Busca algun Trámite..." />
+                            </form>
+                        </div>    
+                    </div>
+                </div-->
+
+                <div id="container-all">
+
+                    <div class="row vendor-grid mt-40">
+                    {% for catesp in collections.categoriaesp2 %}
+                    {% if categoria2.id == catesp.data.categoriaesp2.category | lastSlash %}
+                        {% for servicio in collections.servicios%}
+                        {% if catesp.data.categoriaesp2.name == servicio.data.servicio.subcategory.name%}
+                    
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                            <div class="vendor-wrap style-2 mb-40 ">
+                                <div class="product-badges product-badges-position product-badges-mrg">
+                                    <span class="hot">Trámite</span>
+                                </div>
+                                <div class="vendor-img-action-wrap ">
+                                    <div class="vendor-img">
+                                        <a href="{{servicio.url}}">
+                                            {% if categoria2.id == "27" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-41.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "28" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-35.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "29" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-47.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "30" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-36.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "31" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-48.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "32" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-37.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "33" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-45.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "34" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-40.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "35" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-39.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "36" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-34.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "37" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-46.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "38" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-44.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "39" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-32.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "40" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-43.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "41" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-42.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "42" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-38.png" alt="" />
+                                            {%endif%}
+                                            {% if categoria2.id == "43" %}
+                                                <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-33.png" alt="" />
+                                            {%endif%}
+                                        </a>
+                                    </div>
+                                    <!--div class="mt-10">
+                                        <span class="font-small total-product">380 products</span>
+                                    </div-->
+                                </div>
+                                <div class="vendor-content-wrap pt-40 w-100">
+                                    <div class="mb-30">
+                                        <!--div class="product-category">
+                                            <span class="text-muted">Since 2012</span>
+                                        </div-->
+                                        <div class="custom-overflow-hidden">
+                                            <h4 class="mb-5"><a href="{{servicio.url}}">{{servicio.data.servicio.name}}</a></h4>
+                                        </div>
+                                        <!--div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div-->
+                                        <div class="vendor-info d-flex justify-content-between align-items-end mt-30">
+                                            <ul class="contact-infor text-muted">
+                                                <div class="overflow-hidden" style="height:45px">
+                                                    <li><p class="text-overflow">{{servicio.data.servicio.description}}</p></li>
+                                                </div>
+                                                <!--li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li-->
+                                            </ul>
+                                            <a style="position: absolute;bottom: 0;right: 0;" href="{{servicio.url}}" class="btn btn-xs">Ver más <i class="fi-rs-arrow-small-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end vendor card-->
+                        {% endif %}
+                        {% endfor %}
+                    
+                    {% endif %}
+                    {% endfor %}
+                    </div>
+                    
+                </div>
+
+                <div id="container-results">
+                    <div class="row vendor-grid" id="row-results">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="/assets/js/searchC.js"></script>
+{% endblock %}
