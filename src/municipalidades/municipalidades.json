@@ -1,5 +1,0 @@
-{
-    "tags": "municipalidades",
-    "permalink": "municipalidad/{{ page.fileSlug }}/index.html",
-    "layout": "layouts/municipalidad.njk"
-}
