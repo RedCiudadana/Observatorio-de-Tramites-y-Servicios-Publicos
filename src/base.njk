@@ -18,6 +18,20 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
+    <script>
+        function passvalues(){
+            var busqueda = document.getElementById("searchField").value;
+            localStorage.setItem("busqueda",busqueda);
+            return false;
+        }
+
+        function passvalues2(){
+            var busqueda = document.getElementById("searchinputMov").value;
+            localStorage.setItem("busqueda",busqueda);
+            return false;
+        }
+    </script>
+
     {% block head %}
     {% endblock %}
 
@@ -236,62 +250,125 @@
                             </a>
                             <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
                                 <div class="d-flex categori-dropdown-inner">
-                                    <ul>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-1.svg" alt="" />Milks and Dairies</a>
+                                    <ul class="mx-2">
+                                        {% for category in collections.categorias2 | limit(5)%}
+                                        <li class="item-drop">
+                                            {% if category.data.categoria2.id == "27" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-08.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "28" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-09.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "29" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-10.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "30" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-11.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "31" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-12.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "32" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-13.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "33" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-14.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "34" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-15.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "35" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-16.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "36" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-17.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "37" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-18.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "38" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-19.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "39" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-21.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "40" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-22.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "41" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-23.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "42" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-24.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "43" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-25.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
                                         </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-2.svg" alt="" />Clothing & beauty</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-3.svg" alt="" />Pet Foods & Toy</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-4.svg" alt="" />Baking material</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-5.svg" alt="" />Fresh Fruit</a>
-                                        </li>
+                                        {% endfor %}
                                     </ul>
-                                    <ul class="end">
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-6.svg" alt="" />Wines & Drinks</a>
+                                    <ul class="end mx-2">
+                                        {% for category in collections.categorias2 | limitPart(5,10)%}
+                                        <li class="item-drop">
+                                            {% if category.data.categoria2.id == "27" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-08.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "28" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-09.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "29" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-10.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "30" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-11.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "31" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-12.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "32" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-13.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "33" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-14.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "34" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-15.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "35" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-16.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "36" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-17.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "37" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-18.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "38" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-19.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "39" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-21.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "40" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-22.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "41" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-23.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "42" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-24.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
+                                            {% if category.data.categoria2.id == "43" %}
+                                                <img style="height:40px;padding:4px" alt="" src="/assets/imgs/red/elementos/iconos/ICONO-25.png" alt="" /><a href="{{category.url}}">{{category.data.categoria2.name}}</a>
+                                            {%endif%}
                                         </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-7.svg" alt="" />Fresh Seafood</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-8.svg" alt="" />Fast food</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-9.svg" alt="" />Vegetables</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/category-10.svg" alt="" />Bread and Juice</a>
-                                        </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
-                                <div class="more_slide_open" style="display: none">
-                                    <div class="d-flex categori-dropdown-inner">
-                                        <ul>
-                                            <li>
-                                                <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/icon-1.svg" alt="" />Milks and Dairies</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/icon-2.svg" alt="" />Clothing & beauty</a>
-                                            </li>
-                                        </ul>
-                                        <ul class="end">
-                                            <li>
-                                                <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/icon-3.svg" alt="" />Wines & Drinks</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-grid-right.html"> <img src="/assets/imgs/theme/icons/icon-4.svg" alt="" />Fresh Seafood</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+
+                                <div class="d-flex justify-content-center mt-20">
+                                    <a href="/categorias/index.html" class="btn text-align-center">Ver más</a>
                                 </div>
-                                <div class="more_categories"><span class="icon"></span> <span class="heading-sm-1">Show more...</span></div>
                             </div>
                         </div>
                         <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
@@ -306,63 +383,33 @@
                                     <li class="position-static">
                                         <a href="#">Municipalidades <i class="fi-rs-angle-down"></i></a>
                                         <ul class="mega-menu">
-                                            <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Fruit & Vegetables</a>
+                                            <li class="sub-mega-menu sub-mega-menu-width-33">
                                                 <ul>
-                                                    <li><a href="shop-product-right.html">Meat & Poultry</a></li>
-                                                    <li><a href="shop-product-right.html">Fresh Vegetables</a></li>
-                                                    <li><a href="shop-product-right.html">Herbs & Seasonings</a></li>
-                                                    <li><a href="shop-product-right.html">Cuts & Sprouts</a></li>
-                                                    <li><a href="shop-product-right.html">Exotic Fruits & Veggies</a></li>
-                                                    <li><a href="shop-product-right.html">Packaged Produce</a></li>
+                                                    {% for institucion in collections.ministerios | limit(5) %}
+                                                    <li><a href="{{institucion.url}}">{{institucion.data.instituciones.name}}</a></li>
+                                                    {% endfor%}
                                                 </ul>
                                             </li>
-                                            <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Breakfast & Dairy</a>
+                                            <li class="sub-mega-menu sub-mega-menu-width-33">
                                                 <ul>
-                                                    <li><a href="shop-product-right.html">Milk & Flavoured Milk</a></li>
-                                                    <li><a href="shop-product-right.html">Butter and Margarine</a></li>
-                                                    <li><a href="shop-product-right.html">Eggs Substitutes</a></li>
-                                                    <li><a href="shop-product-right.html">Marmalades</a></li>
-                                                    <li><a href="shop-product-right.html">Sour Cream</a></li>
-                                                    <li><a href="shop-product-right.html">Cheese</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Meat & Seafood</a>
-                                                <ul>
-                                                    <li><a href="shop-product-right.html">Breakfast Sausage</a></li>
-                                                    <li><a href="shop-product-right.html">Dinner Sausage</a></li>
-                                                    <li><a href="shop-product-right.html">Chicken</a></li>
-                                                    <li><a href="shop-product-right.html">Sliced Deli Meat</a></li>
-                                                    <li><a href="shop-product-right.html">Wild Caught Fillets</a></li>
-                                                    <li><a href="shop-product-right.html">Crab and Shellfish</a></li>
+                                                    {% for institucion in collections.ministerios | limitPart(6,11) %}
+                                                    <li><a href="{{institucion.url}}">{{institucion.data.instituciones.name}}</a></li>
+                                                    {% endfor%}
                                                 </ul>
                                             </li>
                                             <li class="sub-mega-menu sub-mega-menu-width-34">
-                                                <div class="menu-banner-wrap">
-                                                    <a href="shop-product-right.html"><img src="/assets/imgs/banner/banner-menu.png" alt="Nest" /></a>
-                                                    <div class="menu-banner-content">
-                                                        <h4>Hot deals</h4>
-                                                        <h3>
-                                                            Don't miss<br />
-                                                            Trending
-                                                        </h3>
-                                                        <div class="menu-banner-price">
-                                                            <span class="new-price text-success">Save to 50%</span>
-                                                        </div>
-                                                        <div class="menu-banner-btn">
-                                                            <a href="shop-product-right.html">Shop now</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="menu-banner-discount">
-                                                        <h3>
-                                                            <span>25%</span>
-                                                            off
-                                                        </h3>
-                                                    </div>
-                                                </div>
+                                                <ul>
+                                                    {% for institucion in collections.ministerios | limitPart(11,16) %}
+                                                    <li><a href="{{institucion.url}}">{{institucion.data.instituciones.name}}</a></li>
+                                                    {% endfor%}
+                                                    {% for institucion in collections.instituciones_comp%}
+                                                        {% if institucion.data.instituciones.id == "154"%}
+                                                        <li><a href="{{institucion.url}}">{{institucion.data.instituciones.name}}</a></li>
+                                                        {%endif%}
+                                                    {% endfor %}
+                                                </ul>
                                             </li>
+                                            <a href="/instituciones/index.html" class="btn">Ver más</a>
                                         </ul>
                                     </li>
                                     <li>
@@ -742,6 +789,44 @@
     <script src="//assets/js/searchMov.js"></script-->
 	{% block javascripts %}
     {% endblock %} 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+    <script>
+      (function(window, document) {
+      "use strict";
+
+      const search = e => {
+        const results = window.searchIndex.search(e.target.value);
+
+        const ol = document.getElementById("searchResults");
+        const searchResultsContainer = document.getElementById("searchResultsContainer");
+        ol.innerHTML = "";
+        searchResultsContainer.style.position = 'none';
+        if (results && results.length > 0) {
+          searchResultsContainer.style.position = 'static';
+          results.map(r => {
+            const { id, name, institution } = r.doc;
+
+            // this is where you'll go wild with your own HTML injection.
+            const li = document.createElement("li");
+            ol.appendChild(li);
+
+            const a = document.createElement("a");
+            a.setAttribute("href", id);
+            a.textContent = `${name}, ${institution}`;
+            li.appendChild(a);
+          });
+        }
+      };
+
+      fetch("/search-index.json").then(response =>
+        response.json().then(rawIndex => {
+          window.searchIndex = elasticlunr.Index.load(rawIndex);
+          document.getElementById("searchField").addEventListener("input", search);
+        })
+      );
+    })(window, document);
+    </script>
 
 </body>
 

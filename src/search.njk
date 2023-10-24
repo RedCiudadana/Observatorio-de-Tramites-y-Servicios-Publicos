@@ -1,0 +1,14 @@
+---
+permalink: '/search.json'
+---
+
+[
+  {% for servicio in collections.servicios %} 
+  { 
+    "name":"{{ servicio.data.servicio.name | parse }}",
+    "name_search":"{{ servicio.data.servicio.name | rem_accent | parse }}",
+    "description":"{{ servicio.data.servicio.description | sub_string | parse }}",
+    "url":"{{ servicio.url }}" 
+  }
+  {% if loop.last == false %},{% endif %} {% endfor %} 
+]

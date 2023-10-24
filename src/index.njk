@@ -92,180 +92,109 @@ permalink: index.html
             <div class="container">
                 <div class="row mb-40 mt-40">
                     <div class="d-flex">
-                        <h4>¿Qué información necesitas?</h4>
-                        <a class="btn btn-xs ml-40"  href="/categorias/index.html">Ver Más<i class="fi-rs-arrow-small-right"></i><a/>
+                        <h4>¿Qué municipalidad deseas ver?</h4>
+                        <a class="btn btn-xs ml-40"  href="/instituciones/index.html">Ver Más<i class="fi-rs-arrow-small-right"></i><a/>
                     </div>
                 </div>
                 <div class="row mb-20 mt-40">
                     
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-08.png">
-                            <div>
-                                <h6>Infraestructura y Vivienda</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
+                    {% for item in collections.ministerios | limit(15) %}
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0 mb-40">
+                        <a href="{{item.url}}"><div class="h-100 banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                            <div class="banner-icon">
+                                <img src="/assets/imgs/red/elementos/iconos/ICONO-20.png" alt="" />
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-09.png">
-                            <div>
-                                <h6>Acceso a Salud</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">{{item.data.instituciones.name}}</h3>
                             </div>
-                        </div>
+                        </div></a>
                     </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-17.png">
-                            <div>
-                                <h6>Violencia y Abuso</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-11.png">
-                            <div>
-                                <h6>Medio Ambiente y Recursos Naturales</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-10.png">
-                            <div>
-                                <h6>Educación</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-16.png">
-                            <div>
-                                <h6>Manipulación de Alimentos, Animales y Vegetales</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-13.png">
-                            <div>
-                                <h6>Trabajo de Pensiones</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-12.png">
-                            <div>
-                                <h6>Suministro de Energía</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-18.png">
-                            <div>
-                                <h6>Seguridad, Mediación y Diálogo</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-14.png">
-                            <div>
-                                <h6>Exportaciones, importaciones, asociaciones y empresas</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-15.png">
-                            <div>
-                                <h6>Economía y Finanzas</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-cats">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-19.png">
-                            <div>
-                                <h6>Transporte</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonummy nibh</p>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                     
                 </div>
                 
             </div>
         </section>
-        <!--Municipalidades-->
-        <section class="featured section-padding-60 px-4" style="background-color:#e3ebf5">
+        <!--CATEGORIAS ESPECIFICAS-->
+        <section class="featured section-padding">
             <div class="container">
-                <div class="d-flex">
-                        <h4>Municipalidades</h4>
-                        <a class="btn btn-xs ml-40"  href="/categorias/index.html">Ver Más<i class="fi-rs-arrow-small-right"></i><a/>
+                <div class="row mb-40 mt-40">
+                    <div class="d-flex">
+                        <h4>¿Qué información necesitas?</h4>
+                        <a class="btn btn-xs ml-40"  href="/instituciones/index.html">Ver Más<i class="fi-rs-arrow-small-right"></i><a/>
                     </div>
-                <div class="row mb-20 mt-40">
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-municipales">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-20.png">
-                            <h6>Nombre de la municipalidad</h6>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-municipales">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-20.png">
-                            <h6>Nombre de la municipalidad</h6>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="cuadros-municipales">
-                            <img src="/assets/imgs/red/elementos/iconos/ICONO-20.png">
-                            <h6>Nombre de la municipalidad</h6>
-                        </div>
-                    </div>
-
                 </div>
-                
+                <div class="row mb-20 mt-40 justify-content-center">
+                    {% for item in collections.categoriaesp2 | limit(10) %}
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0 mb-40">
+                        <a href="{{item.url}}"><div class="h-100 banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                            <div class="banner-icon">
+                                {% for cat in collections.categorias2%}
+                                {% if cat.data.categoria2.id == item.data.categoriaesp2.category | lastSlash %}
+                                    {% if cat.data.categoria2.id == "27" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-08.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "28" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-09.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "29" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-10.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "30" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-11.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "31" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-12.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "32" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-13.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "33" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-14.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "34" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-15.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "35" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-16.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "36" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-17.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "37" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-18.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "38" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-19.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "39" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-21.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "40" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-22.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "41" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-23.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "42" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-24.png" alt="" />
+
+                                    {% elif cat.data.categoria2.id == "43" %}
+                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-25.png" alt="" />
+                                        
+                                    {%endif%}
+
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">{{item.data.categoriaesp2.name}}</h3>
+                            </div>
+                        </div></a>
+                    </div>
+                    {% endfor %}
+                    <a class="btn col-lg-2"  href="/categoriasesps/index.html">Ver Más<a/>
+                </div>
             </div>
         </section>
 {% endblock %}
