@@ -64,7 +64,7 @@ permalink: index.html
                             <p style="margin-bottom: 20px!important;" class="text-center">
                                 Accede a toda la información necesaria para realizar tus trámites personales de manera rápida y eficiente
                             </p>
-                            <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
+                            <a href="#" class="btn btn-xs">Ver más<i class="fi-rs-arrow-small-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -76,7 +76,7 @@ permalink: index.html
                             <p style="margin-bottom: 20px!important;" class="text-center">
                                 Facilitamos tu camino hacia nuevas oportunidades laborales con información detallada sobre los trámites necesarios para buscar y obtener empleo.
                             </p>
-                            <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
+                            <a href="#" class="btn btn-xs">Ver más<i class="fi-rs-arrow-small-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 d-md-none d-lg-flex">
@@ -86,7 +86,7 @@ permalink: index.html
                             <p style="margin-bottom: 20px!important;" class="text-center">
                                 Ayudamos a emprendedores y empresarios a manejar los trámites necesarios para operar y crecer sus negocios en Guatemala.
                             </p>
-                            <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
+                            <a href="#" class="btn btn-xs">Ver más<i class="fi-rs-arrow-small-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -136,63 +136,10 @@ permalink: index.html
                     <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0 mb-40">
                         <a href="{{item.url}}"><div class="h-100 banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay="0">
                             <div class="banner-icon">
-                                {% for cat in collections.categorias2%}
-                                {% if cat.data.categoria2.id == item.data.categoriaesp2.category | lastSlash %}
-                                    {% if cat.data.categoria2.id == "27" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-08.png" alt="" />
 
-                                    {% elif cat.data.categoria2.id == "28" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-09.png" alt="" />
+                                <img  src="/assets/imgs/red/elementos/iconos/ICONO-08.png" alt="" />
 
-                                    {% elif cat.data.categoria2.id == "29" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-10.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "30" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-11.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "31" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-12.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "32" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-13.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "33" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-14.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "34" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-15.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "35" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-16.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "36" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-17.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "37" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-18.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "38" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-19.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "39" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-21.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "40" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-22.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "41" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-23.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "42" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-24.png" alt="" />
-
-                                    {% elif cat.data.categoria2.id == "43" %}
-                                        <img  src="/assets/imgs/red/elementos/iconos/ICONO-25.png" alt="" />
-                                        
-                                    {%endif%}
-
-                                {% endif %}
-                                {% endfor %}
+                                    
                             </div>
                             <div class="banner-text">
                                 <h3 class="icon-box-title">{{item.data.categoriaesp2.name}}</h3>
@@ -200,7 +147,10 @@ permalink: index.html
                         </div></a>
                     </div>
                     {% endfor %}
-                    <a class="btn col-lg-2"  href="/categoriasesps/index.html">Ver Más<a/>
+                    <div class="col-lg-12 justify-content-center d-flex">
+                        <a class="btn "  href="/categoriasesps/index.html">Ver Más</a>
+                    </div>
+                    
                 </div>
             </div>
         </section>
