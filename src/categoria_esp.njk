@@ -12,7 +12,7 @@ tags:
 
 {% block content %}
         <section class="hero-3 position-relative align-items">
-            <h2 class="mb-30 text-center text-white"> {{categoriaesp2.name}} </h2>
+            <h2 class="mb-30 text-center"> {{categoriaesp2.name}} </h2>
         </section>
         
         <div class="page-content pt-50">
@@ -31,61 +31,7 @@ tags:
                                 <div class="vendor-img-action-wrap ">
                                     <div class="vendor-img">
                                         <a href="{{servicio.url}}">
-                                            {% for cat in collections.categorias2%}
-                                            {% if cat.data.categoria2.id == categoriaesp2.category | lastSlash %}
-                                                {% if cat.data.categoria2.id == "27" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-41.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "28" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-35.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "29" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-47.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "30" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-36.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "31" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-48.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "32" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-37.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "33" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-45.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "34" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-40.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "35" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-39.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "36" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-34.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "37" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-46.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "38" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-44.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "39" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-32.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "40" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-43.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "41" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-42.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "42" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-38.png" alt="" />
-                                                {%endif%}
-                                                {% if cat.data.categoria2.id == "43" %}
-                                                    <img class="default-img" src="/ELEMENTOS/ELEMENTOS MEJORAS/NEWICONS/ICONOS-33.png" alt="" />
-                                                {%endif%}
-                                            {% endif %}
-                                            {% endfor %}
+                                            <img class="default-img" src="/assets/imgs/red/elementos/iconos/ICONO-08.png" alt="" />
                                         </a>
                                     </div>
                                     <!--div class="mt-10">
@@ -98,7 +44,7 @@ tags:
                                             <span class="text-muted">Since 2012</span>
                                         </div-->
                                         <div class="custom-overflow-hidden">
-                                            <h4 class="mb-5"><a href="{{servicio.url}}">{{servicio.data.servicio.name}}</a></h4>
+                                            <h3><a href="{{servicio.url}}">{{servicio.data.servicio.name}}</a></h3>
                                         </div>
                                         <!--div class="product-rate-cover">
                                             <div class="product-rate d-inline-block">
@@ -106,10 +52,10 @@ tags:
                                             </div>
                                             <span class="font-small ml-5 text-muted"> (4.0)</span>
                                         </div-->
-                                        <div class="vendor-info d-flex justify-content-between align-items-end mt-30">
+                                        <div class="vendor-info d-flex justify-content-between align-items-end">
                                             <ul class="contact-infor text-muted">
                                                 <div class="overflow-hidden" style="height:45px">
-                                                    <li><p class="text-overflow2" >{{servicio.data.servicio.description}}</p></li>
+                                                    <li><p class="text-overflow2" style="color: #1c1d1a;">{{servicio.data.servicio.description}}</p></li>
                                                 </div>
                                                 <!--li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li-->
                                             </ul>

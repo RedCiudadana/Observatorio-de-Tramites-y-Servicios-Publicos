@@ -39,8 +39,78 @@ tags:
             <div class="row">
                 <div class="col-xl-11 col-lg-12 m-auto">
                     <div class="row">
+                        
+                        <div class="col-lg-9">
+                            <div class="single-page pt-50 pl-30">
+                                <div class="single-header style-2">
+                                    <div class="row">
+                                        <div class="col-xl-10 col-lg-12 m-auto">
+                                            <h6 class="mb-10"><a href="#">Trámite</a></h6>
+                                            <h2 class="mb-10">{{servicio.name}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-content">
+                                    <div class="row">
+                                        <div class="col-xl-10 col-lg-12 m-auto texto-servicio">
+                                            <p>{{servicio.description | rmj |safe}}</p>
+                                            <h4>Normativa</h4>
+                                            <p>{{servicio.normative | rmj |safe}}</p>
+                                            <h4>Requerimientos</h4>
+                                            <p>{{servicio.requirements | rmj |safe}}</p>
+                                            <h4>Pasos</h4>
+                                            <p>{{servicio.instructions | rmj |safe}}</p>
+                                            
+                                            <p>Información proporcionada por: <a href="{% for institucion in collections.instituciones %}{% if institucion.data.instituciones.name === servicio.institution.name%}{{institucion.url}}{%endif%}{%endfor%}">{{servicio.institution.name}}</a></p>
+                                            <!--div class="comment-form ">
+                                                <h5 >Valoración del trámite</h5>
+                                                <form class="rating">
+                                                    <label>
+                                                        <input type="radio" name="stars" value="1" />
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="2" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="3" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>   
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="4" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="5" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                </form>
+                                            </div-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-lg-3 primary-sidebar sticky-sidebar pt-50">
                             <div class="widget-area">
+                                <!-- Ver Trámite en Línea -->
+                                <div class="sidebar-widget widget-category-2 mb-50">
+                                    <h5 class="section-title style-1 mb-30">Inicia el trámite y completa todos los pasos</h5>
+                                    <a class="btn mb-20" href="{{servicio.url}}" target="_blank">Ver Trámite</a>
+                                </div>
+                                <!-- Especificacines -->
                                 <div class="sidebar-widget widget-category-2 mb-50">
                                     <h5 class="section-title style-1 mb-30">Especificaciones</h5>
                                     <ul>
@@ -133,70 +203,6 @@ tags:
                                         </h4>
                                     </div>
                                 </div-->
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-9">
-                            <div class="single-page pt-50 pl-30">
-                                <div class="single-header style-2">
-                                    <div class="row">
-                                        <div class="col-xl-10 col-lg-12 m-auto">
-                                            <h6 class="mb-10"><a href="#">Trámite</a></h6>
-                                            <h2 class="mb-10">{{servicio.name}}</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-content">
-                                    <div class="row">
-                                        <div class="col-xl-10 col-lg-12 m-auto texto-servicio">
-                                            <p>{{servicio.description | rmj |safe}}</p>
-                                            <h4>Normativa</h4>
-                                            <p>{{servicio.normative | rmj |safe}}</p>
-                                            <h4>Requerimientos</h4>
-                                            <p>{{servicio.requirements | rmj |safe}}</p>
-                                            <h4>Pasos</h4>
-                                            <p>{{servicio.instructions | rmj |safe}}</p>
-                                            <h4>Ir al trámite en línea</h4>
-                                            <a class="btn mb-20" href="{{servicio.url}}" target="_blank">Ver Trámite</a>
-                                            <p>Información proporcionada por: <a href="{% for institucion in collections.instituciones %}{% if institucion.data.instituciones.name === servicio.institution.name%}{{institucion.url}}{%endif%}{%endfor%}">{{servicio.institution.name}}</a></p>
-                                            <!--div class="comment-form ">
-                                                <h5 >Valoración del trámite</h5>
-                                                <form class="rating">
-                                                    <label>
-                                                        <input type="radio" name="stars" value="1" />
-                                                        <span class="icon">★</span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="stars" value="2" />
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="stars" value="3" />
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>   
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="stars" value="4" />
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="stars" value="5" />
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                        <span class="icon">★</span>
-                                                    </label>
-                                                </form>
-                                            </div-->
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         
